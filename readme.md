@@ -12,7 +12,7 @@ With CancerStan you can fix some of them automatically or build new fixers yours
 
 ## Install
 
-`composer require tetreum/cancerstan`
+`composer require --dev tetreum/cancerstan`
 
 ## Usage
 
