@@ -1,7 +1,7 @@
 {
   "name": "tetreum/cancerstan",
   "description": "Fix some PHPStan errors automatically",
-  "keywords": ["debug","print"],
+  "keywords": ["dev", "phpstan"],
   "license": "MIT",
   "autoload": {
     "files": ["src/functions.php"],
@@ -14,6 +14,7 @@
     "php": "^8.2"
   },
   "bin": [
-    "cancerstan.phar"
+    "cancerstan.phar",
+    "bin/cancerstan"
   ]
 }

@@ -23,7 +23,7 @@ CancerStan will run PHPStan first to gather the error list and then try to fix t
 ## Options
 
 - `--dry-run`: Will return the changes to apply without applying them
-- `--stan`: To provide PHPStan's location. Ex: --stan=/docker/phpstan . Default: /vendor/phpstan
+- `--stan`: To provide PHPStan's location. Ex: --stan=/docker/phpstan . Default: /vendor/bin/phpstan
 - `--custom-fixers`:  Path to custom fixers directory. Ex: --custom-fixers=./MyCustomFixers
 
 ## Custom fixers
