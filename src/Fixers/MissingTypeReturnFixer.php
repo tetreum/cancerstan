@@ -30,10 +30,7 @@ class MissingTypeReturnFixer extends BaseFixer implements IFixer {
         }
 
         // From CountryCollection::getCrawler() => getCrawler
-        $methodName = explode("::", $matches[1]);
-        $methodName = array_pop($methodName);
-        $methodName = str_replace("()", "", $methodName);
-
+        $methodName = $this->getMethodNameFromAbsolutePath($matches[1]);
         $returnType = $this->getMethodReturnType($file, $methodName);
 
         if (!$returnType) {

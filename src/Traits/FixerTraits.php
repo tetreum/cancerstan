@@ -204,9 +204,20 @@ trait FixerTraits {
                 $propertyReflection = $reflectionClass->getProperty($matches[1]);
                 return $propertyReflection->getType()->getName();
             }
+        } else if ($methodReturn == '$this') {
+            return "self";
         }
 
         return "";
+    }
+
+    public function getMethodNameFromAbsolutePath(string $fullPath): string
+    {
+        // From CountryCollection::getCrawler() => getCrawler
+        $methodName = explode("::", $fullPath);
+        $methodName = array_pop($methodName);
+        $methodName = str_replace("()", "", $methodName);
+        return $methodName;
     }
 
     public function getMethodDeclaredReturnType(FileSummaryDto $file, string $methodName): string {

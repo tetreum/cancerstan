@@ -23,6 +23,7 @@ final class MissingTypeReturnFixerTest extends TestCase
             ["new self()", 'self'],
             ["new TestClass()", 'TestClass'],
             ["\$this->numericMethod()", 'int'],
+            ["\$this", 'self'],
         ];
     }
 
